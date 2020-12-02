@@ -1,7 +1,7 @@
 block variables
 
 doctype html
-html(lang='ja')
+html(lang='en')
   head
     meta(charset='utf-8')
     meta(name='viewport', content=(meta && meta.viewport ? meta.viewport : 'width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no'))
@@ -16,12 +16,10 @@ html(lang='ja')
     block css
       link(rel="stylesheet", href="/assets/css/style.css")
 
-  body(id=(topPage ? 'top' : '' ) )
-    //- mixin
-    include ../components/mixin/_some-mixin
+  body
 
     //- Header
-    include ../components/_header
+    include ../components/_hero
 
     //- block content
     block content

@@ -1,8 +1,6 @@
 /* Font
 ---------------------------------------------------------- */
-// Hiragino
-$font-base: 'Noto Sans JP', 'YuGothic', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
-$font-ie: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+
 
 /* Breakpoint
 ---------------------------------------------------------- */
@@ -15,66 +13,7 @@ $breakpoint-xlg : 1920;
 /* Color
 ---------------------------------------------------------- */
 // Base Color
-$black: #000;
-$white: #fff !default;
+$color-black: #000;
+$color-white: #fff !default;
+$color-base-font: #333;
 
-// Main color
-$color-main    : #545454;
-$charcoal      : #323333;
-$gray          : #b4b4b4;
-$steel         : #b5b5b6;
-$silver        : #f0f0f0;
-$pale-gray     : #eee;
-$light-gray    : #f5f5f5;
-$navy          : #2d4486;
-$cerulean      : #00abeb;
-$light-blue    : #eaf6fd;
-$forest        : #45b035;
-$green         : #6fba2c;
-$light-green   : #e9f5df;
-$turquoise     : #21b8c5;
-$cyan          : #84ccc9;
-$light-cyan    : #eff8f7;
-$yellow        : #fff100;
-$orange        : #f39800;
-$carmine       : #b01f24;
-$shocking-pink : #e4007f;
-$rouge         : #ec6d88;
-$blush         : #fdeff5;
-$light-pink    : #fef7fa;
-
-$colors: (
-  "main"          : $color-main,
-  "charcoal"      : $charcoal,
-  "gray"          : $gray,
-  "steel"         : $steel,
-  "silver"        : $silver,
-  "pale-gray"     : $pale-gray,
-  "light-gray"    : $light-gray,
-  "navy"          : $navy,
-  "cerulean"      : $cerulean,
-  "light-blue"    : $light-blue,
-  "forest"        : $forest,
-  "green"         : $green,
-  "light-green"   : $light-green,
-  "turquoise"     : $turquoise,
-  "cyan"          : $cyan,
-  "light-cyan"    : $light-cyan,
-  "yellow"        : $yellow,
-  "orange"        : $orange,
-  "carmine"       : $carmine,
-  "shocking-pink" : $shocking-pink,
-  "rouge"         : $rouge,
-  "blush"         : $blush,
-  "light-pink"    : $light-pink,
-) !default;
-
-/* Z-index list
----------------------------------------------------------- */
-$zindex-dropdown       : 1000 !default;
-$zindex-sticky         : 1020 !default;
-$zindex-fixed          : 1030 !default;
-$zindex-modal-overlay  : 1040 !default;
-$zindex-modal          : 1050 !default;
-$zindex-popover        : 1060 !default;
-$zindex-tooltip        : 1070 !default;
