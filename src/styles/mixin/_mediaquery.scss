@@ -1,0 +1,67 @@
+/* up
+---------------------------------------------------------- */
+@mixin mq-up($breakpoint) {
+  $width: '';
+
+  @if ($breakpoint == 'lg') {
+    $width: $breakpoint-lg;
+  }
+
+  @else if ($breakpoint == 'xlg') {
+    $width: $breakpoint-xlg;
+  }
+
+  @else if ($breakpoint == 'slg') {
+    $width: $breakpoint-slg;
+  }
+
+  @else if ($breakpoint == 'md') {
+    $width: $breakpoint-md;
+  }
+
+  @else if ($breakpoint == 'sm') {
+    $width: $breakpoint-sm;
+  }
+
+  @else {
+    $width: $breakpoint;
+  }
+
+  @media (min-width: '#{$width}px') {
+    @content;
+  }
+}
+
+/* down
+---------------------------------------------------------- */
+@mixin mq-down($breakpoint) {
+  $width: '';
+
+  @if ($breakpoint == 'lg') {
+    $width: $breakpoint-lg;
+  }
+
+  @else if ($breakpoint == 'xlg') {
+    $width: $breakpoint-xlg;
+  }
+
+  @else if ($breakpoint == 'slg') {
+    $width: $breakpoint-slg;
+  }
+
+  @else if ($breakpoint == 'md') {
+    $width: $breakpoint-md;
+  }
+
+  @else if ($breakpoint == 'sm') {
+    $width: $breakpoint-sm;
+  }
+
+  @else {
+    $width: $breakpoint;
+  }
+
+  @media (max-width: '#{$width}px') {
+    @content;
+  }
+}

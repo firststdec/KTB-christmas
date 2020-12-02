@@ -1,0 +1,22 @@
+/* c-image
+---------------------------------------------------------- */
+.c-image {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .caption {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  &.-fullw {
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+/* c-pagetop
+---------------------------------------------------------- */
+.c-pagetop {
+  position: fixed;
+  right: 61px;
+  bottom: 10%;
+  z-index: $zindex-sticky;
+  cursor: pointer;
+  @include is-opacity();
+
+  @include mq-down(md) {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "block-no-empty": true,
+    "color-no-invalid-hex": true,
+    "indentation": [2],
+    "number-leading-zero": "never",
+    "no-duplicate-at-import-rules": true,
+    "no-invalid-double-slash-comments": true,
+    "no-extra-semicolons": true,
+    "function-comma-space-after": "always",
+    "selector-pseudo-element-colon-notation": "double"
+  }
+}

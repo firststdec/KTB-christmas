@@ -1,0 +1,79 @@
+/* l-contents-top
+---------------------------------------------------------- */
+.l-contents-top {
+  width: 100%;
+
+  @include mq-up(md) {
+    min-width: 1240px;
+  }
+}
+
+/* c-top-pickup
+---------------------------------------------------------- */
+.c-top-pickup {
+  padding: 46px 20px 50px;
+  background: url('/assets/image/common/bg_stripe_02.svg') repeat left top;
+
+  &__in {
+    @include mq-up(md) {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* c-top-insurance
+---------------------------------------------------------- */
+.c-top-insurance {
+  background: url('/assets/image/top/img_insurance_01_pc.jpg') no-repeat left top;
+  background-size: cover;
+
+  @include mq-down(md) {
+    background: $blush;
+  }
+
+  &__in {
+    width: 1240px;
+    padding: 46px 20px 50px;
+    margin: 0 auto;
+
+    @include mq-down(md) {
+      width: 100%;
+      padding: 21px 16px 25px;
+    }
+  }
+
+  &__figure {
+    display: none;
+
+    @include mq-down(md) {
+      display: block;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &--support {
+    @include mq-up(md) {
+      background: url('/assets/image/top/img_support_01_pc.jpg') no-repeat left top;
+      background-size: cover;
+    }
+  }
+
+  &--saving {
+    @include mq-up(md) {
+      background: url('/assets/image/top/img_saving_01_pc.jpg') no-repeat left top;
+      background-size: cover;
+    }
+  }
+}
+
+/* c-top-news
+---------------------------------------------------------- */
+.c-top-news {
+  .c-list-news {
+    border-top: .5px solid $carmine;
+  }
+}
