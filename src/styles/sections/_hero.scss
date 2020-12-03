@@ -1,0 +1,13 @@
+.hero {
+  background-color: #999;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
