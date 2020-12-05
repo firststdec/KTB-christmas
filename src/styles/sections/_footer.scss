@@ -44,6 +44,10 @@
 /* footer-links
 --------------------------------------------- */
 .footer-links {
+  @include mq-down(md) {
+    padding-bottom: 15px;
+  }
+
   &__link {
     font-size: 1.2rem;
 
@@ -89,30 +93,45 @@
     @include mq-down(md) {
       position: relative;
       padding: 15px 0;
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 10px;
-        background-image: url('/assets/image/icon/icon_plus.svg');
-        background-position: 0 0;
-        background-size: 100% auto;
-        background-repeat: no-repeat;
-      }
     }
 
     @include mq-up(md) {
       font-size: 1.6rem;
     }
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      color: $color-border;
+      font-size: 1.2rem;
+
+      @include mq-up(md) {
+        display: none;
+      }
+
+      &--minus {
+        display: none;
+      }
+    }
+
+    &.is-active {
+      .footer-nav__heading-icon--plus {
+        display: none;
+      }
+
+      .footer-nav__heading-icon--minus {
+        display: inline-block;
+      }
+    }
   }
 
   &__list {
     @include mq-down(md) {
-      padding-bottom: 15px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .2s;
     }
 
     @include mq-up(md) {
