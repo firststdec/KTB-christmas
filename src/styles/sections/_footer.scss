@@ -1,7 +1,157 @@
+/* footer-sns
+--------------------------------------------- */
+.footer-sns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include mq-up(md) {
+    justify-content: center;
+  }
+
+  &__heading {
+    font-size: 1.2rem;
+
+    @include mq-up(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 10px;
+  }
+
+  &__link {
+    display: block;
+    width: 26px;
+    height: 26px;
+
+    @include mq-up(md) {
+      width: 40px;
+      height: 40px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* footer-links
+--------------------------------------------- */
+.footer-links {
+  &__link {
+    font-size: 1.2rem;
+
+    @include mq-up(md) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/* footer-nav
+--------------------------------------------- */
+.footer-nav {
+  @include mq-down(md) {
+    border-bottom: 1px solid $color-border;
+  }
+
+  @include mq-up(md) {
+    display: flex;
+  }
+
+  &__col {
+    @include mq-up(md) {
+      flex-grow: 1;
+    }
+  }
+
+  &__item {
+    @include mq-down(md) {
+      border-top: 1px solid $color-border;
+    }
+
+    @include mq-up(md) {
+      &:not(:first-child) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    @include mq-down(md) {
+      position: relative;
+      padding: 15px 0;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        background-image: url('/assets/image/icon/icon_plus.svg');
+        background-position: 0 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    @include mq-up(md) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__list {
+    @include mq-down(md) {
+      padding-bottom: 15px;
+    }
+
+    @include mq-up(md) {
+      margin-top: 10px;
+    }
+  }
+}
+
+/* footer
+--------------------------------------------- */
 .footer {
+  background-color: $color-white;
+
   &__container {
     max-width: 1358px;
-    padding: 0 15px;
+    padding: 50px 15px 40px;
     margin: 0 auto;
+
+    @include mq-up(md) {
+      padding-top: 40px;
+    }
+  }
+
+  &__nav {
+    margin-top: 15px;
+
+    @include mq-up(md) {
+      padding: 25px 2.344vw 0;
+      border-top: 1px solid $color-border;
+    }
+  }
+
+  &__copyright {
+    margin-top: 45px;
+    font-size: 1.2rem;
+    text-align: center;
+
+    @include mq-up(md) {
+      font-size: 1.6rem;
+    }
   }
 }
