@@ -1,11 +1,11 @@
 // -------------------------------------
 //  Sever
 // -------------------------------------
-const config = require('../config.js');
-const { task } = require('gulp');
-const browserSync = require('browser-sync');
+const { task } = require('gulp')
+const browserSync = require('browser-sync')
+const config = require('../config.js')
 
-const server = (done) => {
+const server = done => {
   browserSync({
     server: config[process.env.NODE_ENV].root,
     port: 3000,
@@ -17,10 +17,10 @@ const server = (done) => {
       ignored: ['node_modules'],
       awaitWriteFinish: true,
     },
-  });
-  done();
-};
+  })
+  done()
+}
 
-task(server);
+task(server)
 
-module.exports = server;
+module.exports = server

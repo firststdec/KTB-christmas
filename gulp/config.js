@@ -30,6 +30,6 @@ const config = {
     encode: 'utf8',
     eol: 'CRLF',
   },
-};
+}
 
-module.exports = config;
+module.exports = config

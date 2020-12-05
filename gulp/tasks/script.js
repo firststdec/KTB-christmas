@@ -1,10 +1,10 @@
 // -------------------------------------
 //  Script
 // -------------------------------------
-const config = require('../config.js');
-const { src, dest, task } = require('gulp');
-const webpack = require('webpack-stream');
-const browserSync = require('browser-sync');
+const { src, dest, task } = require('gulp')
+const webpack = require('webpack-stream')
+const browserSync = require('browser-sync')
+const config = require('../config.js')
 
 function script(done) {
   src([`${config.src.script}index.js`])
@@ -36,16 +36,16 @@ function script(done) {
             },
           ],
         },
-        performance : {
-          hints : false
+        performance: {
+          hints: false
         }
       })
     )
     .pipe(dest(`${config[process.env.NODE_ENV].root}${config.dist.script}`))
-    .pipe(browserSync.stream());
-  done();
+    .pipe(browserSync.stream())
+  done()
 }
 
-task(script);
+task(script)
 
-module.exports = script;
+module.exports = script

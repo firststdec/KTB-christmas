@@ -1,18 +1,18 @@
 // -------------------------------------
 //  Style
 // -------------------------------------
-const config = require('../config.js');
-const { src, dest, task } = require('gulp');
-const sass = require('gulp-sass');
-const sassGlob = require('gulp-sass-glob');
-const sourcemaps = require('gulp-sourcemaps');
-const autoprefixer = require('gulp-autoprefixer');
-const plumberNoti = require('gulp-plumber-notifier');
-const wait = require('gulp-wait');
-const gulpIf = require('gulp-if');
-const lec = require('gulp-line-ending-corrector');
-const browserSync = require('browser-sync');
-const gulpStylelint = require('gulp-stylelint');
+const { src, dest, task } = require('gulp')
+const sass = require('gulp-sass')
+const sassGlob = require('gulp-sass-glob')
+const sourcemaps = require('gulp-sourcemaps')
+const autoprefixer = require('gulp-autoprefixer')
+const plumberNoti = require('gulp-plumber-notifier')
+const wait = require('gulp-wait')
+const gulpIf = require('gulp-if')
+const lec = require('gulp-line-ending-corrector')
+const browserSync = require('browser-sync')
+const gulpStylelint = require('gulp-stylelint')
+const config = require('../config.js')
 
 function style() {
   return src(`${config.src.style}**/*.scss`)
@@ -20,7 +20,7 @@ function style() {
     .pipe(sassGlob())
     .pipe(gulpStylelint({
       reporters: [
-        {formatter: 'string', console: true}
+        { formatter: 'string', console: true }
       ]
     }))
     .pipe(sourcemaps.init())
@@ -47,9 +47,9 @@ function style() {
       })
     )
     .pipe(dest(`${config[process.env.NODE_ENV].root}${config.dist.style}`))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
 }
 
-task(style);
+task(style)
 
-module.exports = style;
+module.exports = style
