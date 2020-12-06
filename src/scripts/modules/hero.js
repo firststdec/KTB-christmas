@@ -4,6 +4,12 @@ const fullHeight = () => {
   const windowHeight = window.innerHeight
   const heroElm = document.getElementById('hero')
 
+  // if (window.matchMedia(`(min-width: ${breakpointSP + 1}px)`).matches) { // PC Scope
+  // } else {
+
+  // }
+
+  //if ()
   if (windowHeight >= limitHeight) {
     heroElm.classList.remove(classFreemode)
     heroElm.style.height = `${windowHeight}px`
@@ -22,5 +28,14 @@ const hero = () => {
     fullHeight()
   })
 }
+
+// const checkIsMobile = () => {
+//   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//     return true
+//   // eslint-disable-next-line no-else-return
+//   } else {
+//     return false
+//   }
+// }
 
 export default hero

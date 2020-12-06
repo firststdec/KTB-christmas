@@ -1,0 +1,93 @@
+/* happynewyear-sns
+--------------------------------------------- */
+.happynewyear-sns {
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 24px;
+
+      @include mq-up(md) {
+        margin-left: 35px;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    transition: opacity .2s;
+
+    @include mq-up(md) {
+      width: 50px;
+      height: 50px;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+/* sec-happynewyear
+--------------------------------------------- */
+.sec-happynewyear {
+  padding: 120px 20px 90px;
+  background-image: url('/assets/image/happynewyear/bg_happynewyear_sp.svg');
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mq-up(md) {
+    padding: 240px 20px 120px;
+    background-image: url('/assets/image/happynewyear/bg_happynewyear.svg');
+  }
+
+  &__heading {
+    color: $color-white;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 4.3rem;
+
+    @include mq-up(md) {
+      font-size: 8rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+
+    @include mq-up(md) {
+      font-size: 3rem;
+    }
+  }
+
+  &__sns {
+    margin-top: 15px;
+
+    @include mq-up(md) {
+      margin-top: 30px;
+    }
+  }
+
+  &__charactor {
+    margin-top: 95px;
+    text-align: center;
+
+    @include mq-up(md) {
+      margin-top: 115px;
+    }
+
+    img {
+      width: 200px;
+
+      @include mq-up(md) {
+        width: 520px;
+      }
+    }
+  }
+}
