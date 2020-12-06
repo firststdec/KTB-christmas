@@ -1,8 +1,0 @@
-.sec2 {
-  height: 700px;
-  background: linear-gradient(180deg, rgba(211, 231, 246, 1) 0%, rgba(164, 206, 238, 1) 100%);
-
-  @include mq-up(md) {
-    background: linear-gradient(180deg, rgba(230, 241, 250, 1) 0%, rgba(203, 227, 245, 1) 100%);
-  }
-}

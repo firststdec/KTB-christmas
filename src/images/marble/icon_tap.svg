@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="132.148" viewBox="0 0 128 132.148">
+  <g id="Tap_icon" transform="translate(-1014.072 -1745)">
+    <path id="Icon_touch" d="M23.407,36.067V21.739a9.577,9.577,0,1,1,19.155,0V36.067a17.239,17.239,0,1,0-19.155,0ZM61.1,53.8,43.711,45.146a5.4,5.4,0,0,0-2.069-.421H38.73V21.739a5.746,5.746,0,0,0-11.493,0V62.884L14.1,60.126a6.7,6.7,0,0,0-.919-.115,4.286,4.286,0,0,0-3.026,1.264L7.125,64.34,26.05,83.265a5.767,5.767,0,0,0,4.061,1.686H56.123a5.58,5.58,0,0,0,5.517-4.9l2.873-20.189A5.506,5.506,0,0,0,61.1,53.8Z" transform="translate(1041.718 1740.5)" fill="#fafafa"/>
+    <text id="Tap_here_" data-name="Tap here!" transform="translate(1078.072 1865.148)" fill="#fafafa" font-size="29" font-family="KrungthaiFast-Bold, Krungthai Fast" font-weight="700"><tspan x="-63.264" y="0">Tap here!</tspan></text>
+  </g>
+</svg>
