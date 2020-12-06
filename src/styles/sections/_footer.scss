@@ -1,6 +1,7 @@
 /* footer-sns
 --------------------------------------------- */
 .footer-sns {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -143,6 +144,7 @@
 /* footer
 --------------------------------------------- */
 .footer {
+  position: relative;
   background-color: $color-white;
 
   &__container {
