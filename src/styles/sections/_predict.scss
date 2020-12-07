@@ -11,6 +11,20 @@
 --------------------------------------------- */
 .sec-predict {
   background-color: #fff;
+  margin-top: -177.333vw;
+  transition: margin-top .2s;
+
+  @include mq-up(md) {
+    margin-top: -45.573vw;
+  }
+
+  &.is-show {
+    margin-top: -30.667vw;
+
+    @include mq-up(md) {
+      margin-top: -9.688vw;
+    }
+  }
 
   &__bg {
     &--sp {

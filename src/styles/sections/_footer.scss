@@ -54,6 +54,12 @@
     padding-bottom: 15px;
   }
 
+  &__item {
+    @include mq-up(md) {
+      padding-right: 15px;
+    }
+  }
+
   &__link {
     font-size: 1.2rem;
     transition: opacity .2s;
@@ -168,7 +174,7 @@
   }
 
   &__nav {
-    margin-top: 15px;
+    margin-top: 20px;
 
     @include mq-up(md) {
       padding: 25px 2.344vw 0;

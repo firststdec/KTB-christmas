@@ -52,6 +52,11 @@
   //   padding: 240px 20px 120px;
   //   background-image: url('/assets/image/happynewyear/bg_happynewyear.svg');
   // }
+  margin-top: -29.333vw;
+
+  @include mq-up(md) {
+    margin-top: -41.146vw;
+  }
 
   &__bg {
     position: relative;
