@@ -1,5 +1,6 @@
+const classShow = 'is-show'
+
 const randomPredict = () => {
-  const classShow = 'is-show'
   const predictsArray = document.querySelectorAll('.predict-list__item')
 
   const itemActiveElm = predictsArray[Math.floor(Math.random() * predictsArray.length)]
@@ -13,7 +14,6 @@ const randomPredict = () => {
 }
 
 const openPredict = () => {
-  const classShow = 'is-show'
   const marbleElm = document.getElementById('marble')
   const secMarbleElm = document.getElementById('secMarble')
   const secPredictElm = document.getElementById('secPredict')
@@ -40,8 +40,29 @@ const openPredict = () => {
   })
 }
 
+const openModalQrcode = () => {
+  const modalElm = document.getElementById('modalQrcode')
+  const buttonElm = document.getElementById('buttonOpenModalQrcode')
+  buttonElm.addEventListener('click', e => {
+    e.preventDefault()
+    const predictIsShowElm = document.querySelector('.predict-list__item.is-show')
+    const target = predictIsShowElm.dataset.qrTarget
+    document.getElementById(target).classList.add(classShow)
+    modalElm.classList.add(classShow)
+  })
+}
+
+const closeModalQrcode = () => {
+  const buttonCloseElm = document.getElementById('buttonCloseModalQrcode')
+  buttonCloseElm.addEventListener('click', () => {
+    document.getElementById('modalQrcode').classList.remove(classShow)
+  })
+}
+
 const predict = () => {
   openPredict()
+  openModalQrcode()
+  closeModalQrcode()
 }
 
 export default predict

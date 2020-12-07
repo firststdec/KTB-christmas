@@ -10,13 +10,13 @@ section.sec-predict(id='secPredict')
       img(src='/assets/image/predict/bg_frame_predict.svg' alt='')
     .predict-box__content
       .predict-list
-        .predict-list__item(data-qr='qrWork')
+        .predict-list__item(data-qr-target='qrWork')
           .predict-list__title การงานราบรื่นดี ไม่ค่อยมีอุปสรรค
           .predict-list__text การงานราบรื่นดีมาก ไม่ค่อยมีอุปสรรคหรือปัญหาหนักๆ ทุกงานสามารถฝ่าฟันไปได้ดี
-        .predict-list__item(data-qr='qrHealth')
+        .predict-list__item(data-qr-target='qrHealth')
           .predict-list__title ป่วยกำลังหาย กำลังใจกำลังดี
           .predict-list__text สุขภาพใจกำลังดีขึ้น สิ่งที่เคยเครียดหรือกังวล จะเบาลงและหายไปในที่สุด
-        .predict-list__item(data-qr='qrLove')
+        .predict-list__item(data-qr-target='qrLove')
           .predict-list__title อาการไอเกิดจากไวรัส อาการรักเกิดจากคุณ
           .predict-list__text ความรักปกติดี ไม่มีเรื่องต้องกังวลใจอะไร ส่วนคนโสด ช่วงนี้เนื้อคู่ยังไม่ปรากฎในเรดาห์ ยังต้องรอไปก่อน
       .predict-quote
@@ -25,7 +25,7 @@ section.sec-predict(id='secPredict')
           img(src='/assets/image/predict/txt_termboon.svg' alt='เติมบุญ')
         span.predict-quote__text เพื่อเสริมดวงให้เป็นปีที่ราบรื่นและรุ่งโรจน์กันนะครับ
       .predict-button
-        a.predict-button__button(href='#')
+        a.predict-button__button(href='#' id='buttonOpenModalQrcode')
           i.predict-button__button-icon
             img(src='/assets/image/predict/icon_qrcode.svg' alt='')
           .predict-button__button-text เติมบุญด้านการงาน คลิกเลย
