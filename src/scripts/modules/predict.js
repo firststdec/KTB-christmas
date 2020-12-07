@@ -1,4 +1,18 @@
-const predict = () => {
+const randomPredict = () => {
+  const classShow = 'is-show'
+  const predictsArray = document.querySelectorAll('.predict-list__item')
+
+  const itemActiveElm = predictsArray[Math.floor(Math.random() * predictsArray.length)]
+
+  const prevItemActiveElm = document.querySelector('.predict-list__item.is-show')
+  if (prevItemActiveElm) {
+    prevItemActiveElm.classList.remove(classShow)
+  }
+
+  itemActiveElm.classList.add(classShow)
+}
+
+const openPredict = () => {
   const classShow = 'is-show'
   const marbleElm = document.getElementById('marble')
   const secMarbleElm = document.getElementById('secMarble')
@@ -12,6 +26,8 @@ const predict = () => {
         top: secPredictElmTop,
         behavior: 'smooth',
       })
+
+      randomPredict()
     } else {
       secPredictElm.classList.remove(classShow)
 
@@ -22,6 +38,10 @@ const predict = () => {
       })
     }
   })
+}
+
+const predict = () => {
+  openPredict()
 }
 
 export default predict

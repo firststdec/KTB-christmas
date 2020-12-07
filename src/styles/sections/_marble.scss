@@ -46,11 +46,9 @@
 
   &__text {
     color: $color-white;
-    // font-size: 1.3rem;
     font-size: 3.467vw;
 
     @include mq-up(md) {
-      // font-size: 2.2rem;
       font-size: 1.146vw;
     }
   }
@@ -60,21 +58,8 @@
 --------------------------------------------- */
 .sec-marble {
   position: relative;
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: calc(100% - 175px);
-  //   background: linear-gradient(180deg, rgba(211, 231, 246, 1) 0%, rgba(164, 206, 238, 1) 100%);
-
-  //   @include mq-up(md) {
-  //     height: calc(100% - 335px);
-  //     background: linear-gradient(180deg, rgba(230, 241, 250, 1) 0%, rgba(203, 227, 245, 1) 100%);
-  //   }
-  // }
+  z-index: 2;
+  margin-top: -1px;
 
   &__bg {
     position: relative;
@@ -111,25 +96,20 @@
   }
 
   &__title {
-    // font-size: 1.9rem;
     font-size: 5.067vw;
     color: $color-text-1;
 
     @include mq-up(md) {
-      // font-size: 3.2rem;
       font-size: 1.667vw;
     }
   }
 
   &__text {
-    // margin-top: 10px;
     margin-top: 2.667vw;
-    //font-size: 1.4rem;
     font-size: 3.733vw;
     color: $color-text-2;
 
     @include mq-up(md) {
-      // font-size: 2.2rem;
       margin-top: .781vw;
       font-size: 1.146vw;
     }

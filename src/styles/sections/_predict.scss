@@ -1,15 +1,241 @@
-/* oooo
+/* predict-list
 --------------------------------------------- */
+.predict-list {
+  &__item {
+    display: none;
 
-/* oooo
---------------------------------------------- */
+    &.is-show {
+      display: block;
+    }
+  }
 
-/* oooo
+  &__title {
+    font-size: 7.467vw;
+    color: $color-text-1;
+    text-align: center;
+    line-height: 1.3;
+
+    @include mq-up(md) {
+      font-size: 3.229vw;
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    margin-top: 5.333vw;
+    font-size: 4.267vw;
+    color: $color-text-2;
+    text-align: center;
+
+    @include mq-up(md) {
+      margin-top: .521vw;
+      font-size: 1.198vw;
+    }
+  }
+}
+
+/* predict-quote
 --------------------------------------------- */
+.predict-quote {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8vw;
+  text-align: center;
+
+  @include mq-up(md) {
+    margin-top: 2.646vw;
+  }
+
+  &__text {
+    font-size: 3.200vw;
+
+    @include mq-up(md) {
+      font-size: 1.042vw;
+    }
+  }
+
+  &__img {
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    width: 15.467vw;
+    margin: 0 5px;
+    line-height: 1;
+
+    @include mq-up(md) {
+      top: 0;
+      width: 4.427vw;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* predict-button
+--------------------------------------------- */
+.predict-button {
+  margin-top: 4.8vw;
+  text-align: center;
+  transition: opacity .2s;
+
+  @include mq-up(md) {
+    margin-top: 1.302vw;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2.667vw 4.267vw;
+    background-color: $color-text-1;
+    border-radius: 4px;
+    color: $color-white;
+
+    @include mq-up(md) {
+      padding: .729vw 1.042vw;
+    }
+
+    &-icon {
+      position: relative;
+      top: 2px;
+      width: 3.733vw;
+      margin-right: 2.667vw;
+      line-height: 1;
+
+      @include mq-up(md) {
+        width: 1.042vw;
+        margin-right: .938vw;
+      }
+    }
+
+    &-text {
+      font-family: $font-base-bold;
+      font-size: 3.733vw;
+
+      @include mq-up(md) {
+        font-size: .990vw;
+      }
+    }
+  }
+}
+
+/* predict-sns
+--------------------------------------------- */
+.predict-sns {
+  display: flex;
+  justify-content: center;
+  margin-top: 6.667vw;
+
+  @include mq-up(md) {
+    margin-top: 1.563vw;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 6.400vw;
+
+      @include mq-up(md) {
+        margin-left: 1.823vw;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 9.067vw;
+    height: 9.067vw;
+    transition: opacity .2s;
+
+    @include mq-up(md) {
+      width: 2.656vw;
+      height: 2.656vw;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* predict-box
+--------------------------------------------- */
+.predict-box {
+  position: absolute;
+  top: 35.5vw;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 0 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .2s;
+
+  @include mq-up(md) {
+    top: 14.583vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 76.302vw;
+  }
+
+  @include mq-up(1920) {
+    width: 1465px;
+    margin: 0 auto;
+  }
+
+  &__bg {
+    position: relative;
+    z-index: 1;
+
+    &--sp {
+      @include mq-up(md) {
+        display: none;
+      }
+    }
+
+    &--pc {
+      @include mq-down(md) {
+        display: none;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+    padding: 0 19.333vw;
+    margin-top: 5vw;
+
+    @include mq-up(md) {
+      padding: 0 17.969vw;
+      margin-top: 0;
+    }
+  }
+}
 
 /* sec-predict
 --------------------------------------------- */
 .sec-predict {
+  position: relative;
   background-color: #fff;
   margin-top: -177.333vw;
   transition: margin-top .2s;
@@ -24,9 +250,17 @@
     @include mq-up(md) {
       margin-top: -9.688vw;
     }
+
+    .predict-box {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &__bg {
+    position: relative;
+    z-index: 1;
+
     &--sp {
       @include mq-up(md) {
         display: none;
@@ -37,6 +271,10 @@
       @include mq-down(md) {
         display: none;
       }
+    }
+
+    img {
+      width: 100%;
     }
   }
 }

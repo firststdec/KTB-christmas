@@ -54,6 +54,7 @@
 --------------------------------------------- */
 .hero {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   background-image: url('/assets/image/hero/bg_hero_sp.svg');
   background-position: center bottom;
@@ -107,8 +108,6 @@
 
     @include mq-up(md) {
       top: 25px;
-      // left: 3%;
-      // width: 223px;
       left: 1.823vw;
       width: 11.615vw;
     }
@@ -130,14 +129,6 @@
       top: 2.604vw;
     }
   }
-
-  // &__character {
-  //   position: absolute;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   bottom: 110px;
-  //   width: 260px;
-  // }
 
   &__arrow {
     position: absolute;
