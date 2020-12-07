@@ -1,0 +1,255 @@
+/* .btn-complete
+--------------------------------------------- */
+.btn-complete {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 237px;
+  height: 48px;
+  background-color: $color-white;
+  border-radius: 4px;
+  box-shadow:  0 3px 6px 0 rgba(0, 0, 0, .1);
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: $color-text-1;
+  text-align: center;
+  transition: opacity .2s;
+
+  @include mq-up(md) {
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+/* qrcode-howto
+--------------------------------------------- */
+.qrcode-howto {
+  @include mq-up(md) {
+    padding: 30px 50px;
+    border: 2px solid $color-white;
+    border-radius: 8px;
+  }
+
+  &__title {
+    font-family: $font-base-bold;
+    color: $color-text-2;
+
+    @include mq-up(md) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__list {
+    @include mq-up(md) {
+      margin-top: 10px;
+    }
+  }
+
+  &__item {
+    font-size: 1.7rem;
+    font-family: $font-base-italic;
+    color: $color-text-2;
+  }
+
+  &--sp {
+    @include mq-up(md) {
+      display: none;
+    }
+  }
+
+  &--pc {
+    @include mq-down(md) {
+      display: none;
+    }
+  }
+}
+
+/* btn-luck-other
+--------------------------------------------- */
+.btn-luck-other {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 87px;
+  background-color: #00A4E4;
+  box-shadow:  0 3px 6px 0 rgba(0, 0, 0, .1);
+  border-radius: 4px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: $color-white;
+  transition: opacity .2s;
+
+  @include mq-up(md) {
+    width: 100%;
+    height: 140px;
+    padding: 1.042vw;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  @include mq-up(1120) {
+    height: 187px;
+  }
+
+  &__icon {
+    height: 45px;
+
+    @include mq-up(md) {
+      height: 5.104vw;
+    }
+
+    img {
+      width: auto;
+      max-width: none;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 5px;
+  }
+}
+
+// /* box-btn-other
+// --------------------------------------------- */
+.box-btn-other {
+  &__title {
+    font-family: $font-base-bold;
+    font-size: 1.7rem;
+    color: $color-text-2;
+    text-align: center;
+
+    @include mq-up(md) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 15px;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-left: 18px;
+    }
+
+    @include mq-up(md) {
+      width: 50%;
+    }
+  }
+}
+
+/* modal
+--------------------------------------------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 35px 0 45px;
+  background-image: url('/assets/image/modal/bg_modal_sp.svg');
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mq-up(md) {
+    padding: 100px 0;
+    background-image: url('/assets/image/modal/bg_modal.svg');
+    background-position: center top;
+  }
+
+  &__close {
+    position: fixed;
+    top: 20px;
+    right: 45px;
+    width: 50px;
+    height: 50px;
+    background-image: url('/assets/image/modal/icon_close.svg');
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    width: 250px;
+    margin: 0 auto;
+
+    @include mq-down(md) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include mq-up(md) {
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    @include mq-up(1120) {
+      width: 1120px;
+    }
+
+  }
+
+  &__qrcode {
+    @include mq-up(md) {
+      width: 45%;
+    }
+  }
+
+  &__detail {
+    @include mq-down(md) {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+    }
+
+    @include mq-up(md) {
+      flex-shrink: 0;
+      width: 45%;
+      margin-left: 10%;
+    }
+
+    &-howto {
+      order: 1;
+    }
+
+    &-other {
+      order: 3;
+
+      @include mq-down(md) {
+        margin-top: 30px;
+      }
+
+      @include mq-up(md) {
+        order: 2;
+        margin-top: 50px;
+      }
+    }
+
+    &-complete {
+      order: 2;
+
+      @include mq-down(md) {
+        margin-top: 25px;
+      }
+
+      @include mq-up(md) {
+        order: 3;
+        margin-top: 50px;
+        text-align: center;
+      }
+    }
+  }
+}

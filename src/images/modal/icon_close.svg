@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90.081" height="90.081" viewBox="0 0 90.081 90.081">
+  <defs>
+    <filter id="Ellipse_226" x="0" y="0" width="90.081" height="90.081" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect width="16" height="15.999" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Exist" transform="translate(46.299 6) rotate(47)">
+    <g transform="matrix(0.68, -0.73, 0.73, 0.68, -35.96, 29.77)" filter="url(#Ellipse_226)">
+      <circle id="Ellipse_226-2" data-name="Ellipse 226" cx="25.5" cy="25.5" r="25.5" transform="translate(46.3 6) rotate(47)" fill="#fafafa"/>
+    </g>
+    <g id="_" data-name="+" transform="translate(17.5 17.501)" clip-path="url(#clip-path)">
+      <path id="Union_1" data-name="Union 1" d="M7,16V9H0V7H7V0H9V7h7V9H9v7Z" fill="#043d5d"/>
+    </g>
+  </g>
+</svg>

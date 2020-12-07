@@ -3,26 +3,32 @@
 .hero-heading {
   position: relative;
   z-index: 1;
-  width: 310px;
-
-  @include mq-up(md) {
-    width: auto;
-  }
 
   &__image {
     text-align: center;
 
     img {
+      width: 82.667vw;
+
       @include mq-up(md) {
-        width: 444px;
+        width: 23.125vw;
       }
     }
   }
 
   &__text {
+    width: 100%;
     margin-top: 15px;
     color: $color-text-1;
     text-align: center;
+
+    @include mq-down(md) {
+      padding: 0 18.667vw;
+    }
+
+    @include mq-up(md) {
+      width: 41.042vw;
+    }
   }
 }
 
@@ -101,8 +107,9 @@
 
     @include mq-up(md) {
       top: 25px;
-      left: 3.906vw;
+      // left: 3%;
       // width: 223px;
+      left: 1.823vw;
       width: 11.615vw;
     }
 
@@ -113,18 +120,24 @@
 
   &__heading {
     position: absolute;
-    top: 85px;
+    top: 21.333vw;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+
+    @include mq-up(md) {
+      width: auto;
+      top: 2.604vw;
+    }
   }
 
-  &__character {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 110px;
-    width: 260px;
-  }
+  // &__character {
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   bottom: 110px;
+  //   width: 260px;
+  // }
 
   &__arrow {
     position: absolute;
