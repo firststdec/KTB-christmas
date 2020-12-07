@@ -8,7 +8,8 @@
     text-align: center;
 
     img {
-      width: 82.667vw;
+      width: 310px;
+      // width: 82.667vw;
 
       @include mq-up(md) {
         width: 23.125vw;
@@ -58,11 +59,11 @@
   overflow: hidden;
   background-image: url('/assets/image/hero/bg_hero_sp.svg');
   background-position: center bottom;
-  background-size: cover;
+  background-size: auto 100%;
   background-repeat: no-repeat;
 
   @include mq-up(md) {
-    background-image: url('/assets/image/hero/bg_hero.svg');
+    background-image: url('/assets/image/hero/bg_hero.jpg');
   }
 
   &__light {
@@ -97,7 +98,7 @@
   &__logo {
     display: block;
     position: absolute;
-    width: 111px;
+    width: 29.333vw;
     height: auto;
 
     @include mq-down(md) {

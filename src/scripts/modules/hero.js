@@ -23,14 +23,4 @@ const hero = () => {
   })
 }
 
-// const checkIsMobile = () => {
-// eslint-disable-next-line max-len
-//   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//     return true
-//   // eslint-disable-next-line no-else-return
-//   } else {
-//     return false
-//   }
-// }
-
 export default hero

@@ -77,7 +77,6 @@
   background-color: #00A4E4;
   box-shadow:  0 3px 6px 0 rgba(0, 0, 0, .1);
   border-radius: 4px;
-  font-size: 1.1rem;
   text-align: center;
   color: $color-white;
   transition: opacity .2s;
@@ -112,6 +111,11 @@
 
   &__text {
     margin-top: 5px;
+    font-size: 2.933vw;
+
+    @include mq-up(md) {
+      font-size: 1.302vw;
+    }
   }
 }
 
@@ -131,13 +135,11 @@
 
   &__list {
     display: flex;
-    margin-top: 15px;
+    margin: 15px -9px 0;
   }
 
   &__item {
-    &:not(:first-child) {
-      margin-left: 18px;
-    }
+    padding: 0 9px;
 
     @include mq-up(md) {
       width: 50%;
@@ -192,13 +194,9 @@
   }
 
   &__content {
-    display: none;
+    display: flex;
     width: 250px;
     margin: 0 auto;
-
-    &.is-show {
-      display: flex;
-    }
 
     @include mq-down(md) {
       flex-direction: column;
