@@ -13,10 +13,10 @@ const facebookShare = () => {
       function(response) {
         if (response && !response.error_message) {
           // eslint-disable-next-line no-alert
-          alert('Posting completed.')
+          console.log('Posting completed.')
         } else {
           // eslint-disable-next-line no-alert
-          alert('Error while posting.')
+          console.log('Error while posting.')
         }
       }
     )

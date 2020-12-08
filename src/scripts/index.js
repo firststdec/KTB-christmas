@@ -5,6 +5,7 @@ import arrowDown from './modules/arrowDown'
 import predict from './modules/predict'
 import modal from './modules/modal'
 import footerNav from './modules/footerNav'
+// import snsShare from './modules/snsShare'
 
 const app = () => {
   hero()
@@ -12,6 +13,7 @@ const app = () => {
   predict()
   modal()
   footerNav()
+  // snsShare()
 }
 
 app()
