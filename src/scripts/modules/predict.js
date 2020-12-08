@@ -19,21 +19,12 @@ const openPredict = () => {
   const secPredictElm = document.getElementById('secPredict')
   marbleElm.addEventListener('click', () => {
     if (!secPredictElm.classList.contains(classShow)) {
-      secPredictElm.classList.add(classShow)
+      randomPredict()
 
       const secPredictElmTop = secMarbleElm.offsetTop + secMarbleElm.offsetHeight
+      secPredictElm.classList.add(classShow)
       window.scrollTo({
         top: secPredictElmTop,
-        behavior: 'smooth',
-      })
-
-      randomPredict()
-    } else {
-      secPredictElm.classList.remove(classShow)
-
-      const secMarbleElmTop = secMarbleElm.offsetTop
-      window.scrollTo({
-        top: secMarbleElmTop,
         behavior: 'smooth',
       })
     }
@@ -95,12 +86,20 @@ const openModalQrcode = () => {
 
   buttonElm.addEventListener('click', e => {
     e.preventDefault()
+
+    const htmlElm = document.getElementsByTagName('html')[0]
     const predictIsShowElm = document.querySelector('.predict-list__item.is-show')
     const target = predictIsShowElm.dataset.qrTarget
 
+    // set qrcode before open
     setQrCode(target)
 
+    // open
     modalElm.classList.add(classShow)
+    setTimeout(() => {
+      htmlElm.classList.add('is-locked')
+      htmlElm.style.top = `${window.scrollY * -1}`
+    }, 250)
   })
 }
 

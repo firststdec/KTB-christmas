@@ -11,6 +11,8 @@ const fullHeight = () => {
     heroElm.classList.add(classFreemode)
     heroElm.style.height = `${limitHeight}px`
   }
+
+  document.getElementsByTagName('body')[0].style.visibility = 'visible'
 }
 
 const hero = () => {

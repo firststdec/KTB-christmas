@@ -8,13 +8,30 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='format-detection' content='telephone=no')
 
-    title= (meta && meta.title ? meta.title : '')
+    title=(meta && meta.title ? meta.title : '')
     meta(name='keyword', content=(meta && meta.keyword ? meta.keyword : ''))
     meta(name='description', content=(meta && meta.description ? meta.description : ''))
+
+    meta(property="og:title", content=(meta && meta.ogTitle ? meta.ogTitle : ''))
+    meta(property="og:description", content=(meta && meta.ogDescription ? meta.ogDescription : ''))
+    meta(property="og:type", content=(meta && meta.ogType ? meta.ogType : ''))
+    meta(property="og:site_name", content=(meta && meta.ogSiteName ? meta.ogSiteName : ''))
+    meta(property="og:url", content=(meta && meta.ogUrl ? meta.ogUrl : ''))
+    meta(property="og:image", content=(meta && meta.ogImage ? meta.ogImage : ''))
 
      //- CSS
     block css
       link(rel="stylesheet", href='/assets/css/style.css')
+
+    <!-- Google Tag Manager -->
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-52FX7N2');
+    <!-- End Google Tag Manager -->
+
 
   body
     block content
@@ -22,3 +39,9 @@ html(lang='en')
     //- JS
     block scripts
       script(src='/assets/js/main.bundle.js')
+
+      <!-- Google Tag Manager (noscript) -->
+      noscript
+        iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-52FX7N2" height="0" width="0" style="display:none;visibility:hidden")
+      <!-- End Google Tag Manager (noscript) -->
+

@@ -155,8 +155,8 @@
     transition: opacity .2s;
 
     @include mq-up(md) {
-      width: 2.656vw;
-      height: 2.656vw;
+      width: 2.6vw;
+      height: 2.6vw;
 
       &:hover {
         opacity: .7;
@@ -239,6 +239,8 @@
   background-color: #fff;
   margin-top: -177.333vw;
   transition: margin-top .2s;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 
   @include mq-up(md) {
     margin-top: -45.573vw;
