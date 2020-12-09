@@ -19,14 +19,17 @@ const openPredict = () => {
   const secPredictElm = document.getElementById('secPredict')
   marbleElm.addEventListener('click', () => {
     if (!secPredictElm.classList.contains(classShow)) {
+      marbleElm.classList.add('is-shake')
       randomPredict()
 
-      const secPredictElmTop = secMarbleElm.offsetTop + secMarbleElm.offsetHeight
-      secPredictElm.classList.add(classShow)
-      window.scrollTo({
-        top: secPredictElmTop,
-        behavior: 'smooth',
-      })
+      setTimeout(() => {
+        const secPredictElmTop = secMarbleElm.offsetTop + secMarbleElm.offsetHeight
+        secPredictElm.classList.add(classShow)
+        window.scrollTo({
+          top: secPredictElmTop,
+          behavior: 'smooth',
+        })
+      }, 700)
     }
   })
 }
