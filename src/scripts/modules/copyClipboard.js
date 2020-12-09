@@ -4,8 +4,6 @@ const copyClipboard = () => {
   const btnCopyClipboardElmArray = document.querySelectorAll('.btn-copy-clipboard')
   const inputClipboardElm = document.getElementById('inputClipboard')
 
-  console.log(inputClipboardElm)
-
   for (const button of btnCopyClipboardElmArray) {
     const tooltipElm = button.querySelector('.btn-copy-clipboard__tooltip')
     button.addEventListener('click', e => {

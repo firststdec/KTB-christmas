@@ -6,8 +6,11 @@ const facebookShare = () => {
     // eslint-disable-next-line no-undef
     FB.ui(
       {
+        app_id: '725918654987891',
         method: 'share',
-        href: 'https://developers.facebook.com/docs/',
+        href: 'https://krungthaihny2021.com/',
+        redirect_uri: 'https://krungthaihny2021.com/',
+        hashtag: '#KTBHNY2021'
       },
       // callback
       function(response) {

@@ -191,9 +191,9 @@
   }
 }
 
-/* footer
+/* btn-backtotop
 --------------------------------------------- */
-.footer-backtotop {
+.btn-backtotop {
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -213,7 +213,7 @@
   &.is-show {
     opacity: 1;
     visibility: visible;
-    z-index: 11;
+    z-index: 99;
   }
 
   &__arrow {

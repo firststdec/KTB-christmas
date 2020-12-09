@@ -7,7 +7,7 @@ const cache = require('gulp-cache')
 const config = require('../config.js')
 
 function image() {
-  return src(`${config.src.image}**/*.{gif,jpg,jpeg,png,svg}`)
+  return src(`${config.src.image}**/*.{gif,jpg,jpeg,png,svg,ico}`)
     .pipe(cache(
       imagemin([
         imagemin.gifsicle({
