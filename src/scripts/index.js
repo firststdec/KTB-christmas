@@ -6,7 +6,7 @@ import predict from './modules/predict'
 import modal from './modules/modal'
 import buttonBackToTop from './modules/buttonBackToTop'
 import copyClipboard from './modules/copyClipboard'
-// import snsShare from './modules/snsShare'
+import snsShare from './modules/snsShare'
 
 const app = () => {
   hero()
@@ -15,7 +15,7 @@ const app = () => {
   modal()
   buttonBackToTop()
   copyClipboard()
-  // snsShare()
+  snsShare()
 }
 
 app()

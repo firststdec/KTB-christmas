@@ -1,16 +1,31 @@
+import dataPredict from './dataPredict'
+
 const classShow = 'is-show'
 
 const randomPredict = () => {
-  const predictsArray = document.querySelectorAll('.predict-list__item')
+  const predictBoxElm = document.getElementById('predictBox')
+  const predictBoxItemElm = predictBoxElm.querySelector('.predict-list__item')
+  const predictBoxTitleElm = predictBoxElm.querySelector('.predict-list__title')
+  const predictBoxTextElm = predictBoxElm.querySelector('.predict-list__text')
+  const objectResult = dataPredict[Math.floor(Math.random() * dataPredict.length)]
 
-  const itemActiveElm = predictsArray[Math.floor(Math.random() * predictsArray.length)]
+  let orcodeType = ''
 
-  const prevItemActiveElm = document.querySelector('.predict-list__item.is-show')
-  if (prevItemActiveElm) {
-    prevItemActiveElm.classList.remove(classShow)
+  switch (objectResult.type) {
+    case 'health':
+      orcodeType = 'qrHealth'
+      break
+    case 'love':
+      orcodeType = 'qrLove'
+      break
+    default:
+      orcodeType = 'qrWork'
   }
 
-  itemActiveElm.classList.add(classShow)
+  predictBoxItemElm.setAttribute('data-qr-target', orcodeType)
+  predictBoxItemElm.setAttribute('data-banner-share', objectResult.banner)
+  predictBoxTitleElm.innerHTML = objectResult.title
+  predictBoxTextElm.innerHTML = objectResult.desc
 }
 
 const openPredict = () => {
@@ -91,7 +106,7 @@ const openModalQrcode = () => {
     e.preventDefault()
 
     const htmlElm = document.getElementsByTagName('html')[0]
-    const predictIsShowElm = document.querySelector('.predict-list__item.is-show')
+    const predictIsShowElm = document.querySelector('.predict-list__item')
     const target = predictIsShowElm.dataset.qrTarget
 
     // set qrcode before open

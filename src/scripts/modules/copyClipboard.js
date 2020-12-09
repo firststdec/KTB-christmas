@@ -2,14 +2,17 @@
 const copyClipboard = () => {
   const classShow = 'is-show'
   const btnCopyClipboardElmArray = document.querySelectorAll('.btn-copy-clipboard')
+  const inputClipboardElm = document.getElementById('inputClipboard')
+
+  console.log(inputClipboardElm)
+
   for (const button of btnCopyClipboardElmArray) {
     const tooltipElm = button.querySelector('.btn-copy-clipboard__tooltip')
     button.addEventListener('click', e => {
       e.preventDefault()
-      const copyTextElm = button.previousElementSibling
 
-      copyTextElm.select()
-      copyTextElm.setSelectionRange(0, 99999)
+      inputClipboardElm.select()
+      inputClipboardElm.setSelectionRange(0, 99999)
       document.execCommand('copy')
 
       tooltipElm.classList.add(classShow)

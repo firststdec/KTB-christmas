@@ -1,14 +1,6 @@
 /* predict-list
 --------------------------------------------- */
 .predict-list {
-  &__item {
-    display: none;
-
-    &.is-show {
-      display: block;
-    }
-  }
-
   &__title {
     font-size: 7.467vw;
     color: $color-text-1;

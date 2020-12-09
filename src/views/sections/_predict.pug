@@ -9,16 +9,10 @@ section.sec-predict(id='secPredict')
     .predict-box__bg.predict-box__bg--pc
       img(src='/assets/image/predict/bg_frame_predict.svg' alt='')
     .predict-box__content
-      .predict-list
-        .predict-list__item(data-qr-target='qrWork')
-          .predict-list__title การงานราบรื่นดี ไม่ค่อยมีอุปสรรค
-          .predict-list__text การงานราบรื่นดีมาก ไม่ค่อยมีอุปสรรคหรือปัญหาหนักๆ ทุกงานสามารถฝ่าฟันไปได้ดี
-        .predict-list__item(data-qr-target='qrHealth')
-          .predict-list__title ป่วยกำลังหาย กำลังใจกำลังดี
-          .predict-list__text สุขภาพใจกำลังดีขึ้น สิ่งที่เคยเครียดหรือกังวล จะเบาลงและหายไปในที่สุด
-        .predict-list__item(data-qr-target='qrLove')
-          .predict-list__title อาการไอเกิดจากไวรัส อาการรักเกิดจากคุณ
-          .predict-list__text ความรักปกติดี ไม่มีเรื่องต้องกังวลใจอะไร ส่วนคนโสด ช่วงนี้เนื้อคู่ยังไม่ปรากฎในเรดาห์ ยังต้องรอไปก่อน
+      .predict-list(id='predictBox')
+        .predict-list__item
+          .predict-list__title
+          .predict-list__text
       .predict-quote
         span.predict-quote__text ปีนี้น้องวายุขอเชิญชวนพี่ๆ
         span.predict-quote__img
@@ -37,7 +31,6 @@ section.sec-predict(id='secPredict')
           a.predict-sns__link(href='#' id='buttonShareFacebook')
             img(src='/assets/image/sns/icon_facebook.svg' alt='')
         li.predict-sns__item
-          input.input-copy-clipboard(type='text' value='https://krungthaihny2021.com/')
           a.predict-sns__link.btn-copy-clipboard(href='#' title='https://krungthaihny2021.com/')
             img(src='/assets/image/sns/icon_clipboard.svg' alt='https://krungthaihny2021.com/')
             span.btn-copy-clipboard__tooltip Copied

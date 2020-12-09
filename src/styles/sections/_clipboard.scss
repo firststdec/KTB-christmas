@@ -1,5 +1,7 @@
 .input-copy-clipboard {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  // visibility: hidden;
 }
 
 .btn-copy-clipboard {

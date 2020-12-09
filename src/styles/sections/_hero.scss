@@ -9,7 +9,6 @@
 
     img {
       width: 310px;
-      // width: 82.667vw;
 
       @include mq-up(md) {
         width: 22vw;
