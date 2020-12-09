@@ -97,10 +97,7 @@
   }
 
   &__logo {
-    display: block;
     position: absolute;
-    width: 29.333vw;
-    height: auto;
 
     @include mq-down(md) {
       top: 30px;
@@ -111,7 +108,16 @@
     @include mq-up(md) {
       top: 25px;
       left: 1.823vw;
-      width: 11.615vw;
+    }
+
+    &-link {
+      display: block;
+      width: 29.333vw;
+      height: auto;
+
+      @include mq-up(md) {
+        width: 11.615vw;
+      }
     }
 
     img {

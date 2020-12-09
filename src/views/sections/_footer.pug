@@ -1,6 +1,52 @@
 footer.footer
-  .footer__top.footer__container
-    a.footer__link-main-page(href='https://krungthai.com/th/personal' target='_blank') ไปเว็บไซต์หลักธนาคารกรุงไทย
+  .footer-backtotop(id='btnBackToTop')
+    .footer-backtotop__arrow
+  .footer__top
+    .footer__link-mainpage
+      a.footer-link-mainpage(href='https://krungthai.com/th/personal' target='_blank')
+        span.footer-link-mainpage__text ไปเว็บไซต์หลักธนาคารกรุงไทย
+        img.footer-link-mainpage__icon(src='/assets/image/footer/chevron-right.png')
     .footer__contact
+      .footer-contact
+        .footer-contact__item
+          a.footer-contact__link(href='https://krungthai.com/th/contact-us/ktb-location' target='_blank')
+            img.footer-contact__icon(src='/assets/image/footer/pinpoint-icn-white.png')
+            span.footer-contact__text จุดให้บริการ
+        .footer-contact__item
+          a.footer-contact__link(href='https://krungthai.com/th/content/contact-us' target='_blank')
+            img.footer-contact__icon(src='/assets/image/footer/speech-icn-white.png')
+            span.footer-contact__text ติดต่อเรา
+  .footer__bottom
+    .footer__tel
+      a.footer-tel(href='tel:021111111' title='Contact Center')
+        i.footer-tel__icon
+          img(src='/assets/image/footer/mobile-footer-icon.png', alt='')
+        .footer-tel__text
+          .footer-tel__title Contact Center
+          .footer-tel__number 0 2111 1111
+    .footer__sns
+      .footer-sns
+        .footer-sns__title พบกับเราได้ที่
+        ul.footer-sns__list
+          li.footer-sns__item
+            a.footer-sns__link(href='https://www.facebook.com/krungthaibank/' target='_blank' title='Facebook')
+              img.footer-sns__img.footer-sns__img--default(src='/assets/image/footer/fb-btn.png', alt='')
+              img.footer-sns__img.footer-sns__img--ovr(src='/assets/image/footer/fb-btn-ovr.png', alt='')
+          li.footer-sns__item
+            a.footer-sns__link(href='https://krungthai.com/th/content/line-official' target='_blank' title='Line')
+              img.footer-sns__img.footer-sns__img--default(src='/assets/image/footer/ln-btn.png', alt='')
+              img.footer-sns__img.footer-sns__img--ovr(src='/assets/image/footer/ln-btn-ovr.png', alt='')
+          li.footer-sns__item
+            a.footer-sns__link(href='https://twitter.com/Krungthai_Care' target='_blank' title='Twitter')
+              img.footer-sns__img.footer-sns__img--default(src='/assets/image/footer/tw-btn.png', alt='')
+              img.footer-sns__img.footer-sns__img--ovr(src='/assets/image/footer/tw-btn-ovr.png', alt='')
+          li.footer-sns__item
+            a.footer-sns__link(href='https://www.instagram.com/krungthai_care/' target='_blank' title='Instagram')
+              img.footer-sns__img.footer-sns__img--default(src='/assets/image/footer/ig-btn.png', alt='')
+              img.footer-sns__img.footer-sns__img--ovr(src='/assets/image/footer/ig-btn-ovr.png', alt='')
+          li.footer-sns__item
+            a.footer-sns__link(href='https://www.youtube.com/ktbcare' target='_blank' title='Youtube')
+              img.footer-sns__img.footer-sns__img--default(src='/assets/image/footer/yt-btn.png', alt='')
+              img.footer-sns__img.footer-sns__img--ovr(src='/assets/image/footer/yt-btn-ovr.png', alt='')
 
 
