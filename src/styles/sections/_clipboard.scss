@@ -1,0 +1,39 @@
+.input-copy-clipboard {
+  display: none;
+}
+
+.btn-copy-clipboard {
+  position: relative;
+
+  &__tooltip {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 15px;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 4px;
+    color: $color-white;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s;
+
+    &.is-show {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid rgba(0, 0, 0, .6);
+    }
+  }
+}

@@ -31,11 +31,13 @@ section.sec-predict(id='secPredict')
           .predict-button__button-text เติมบุญด้านการงาน คลิกเลย
       ul.predict-sns
         li.predict-sns__item
-          a.predict-sns__link(href='#dummy')
-            img(src='/assets/image/sns/icon_line.svg' alt='')
+          a.predict-sns__link(href='#')
+            img(src='/assets/image/sns/icon_line.svg' alt='' title='Share')
         li.predict-sns__item
-          a.predict-sns__link(href='#dummy' id='buttonShareFacebook')
+          a.predict-sns__link(href='#' id='buttonShareFacebook')
             img(src='/assets/image/sns/icon_facebook.svg' alt='')
         li.predict-sns__item
-          a.predict-sns__link(href='#dummy')
-            img(src='/assets/image/sns/icon_clipboard.svg' alt='')
+          input.input-copy-clipboard(type='text' value='https://krungthaihny2021.com/')
+          a.predict-sns__link.btn-copy-clipboard(href='#' title='https://krungthaihny2021.com/')
+            img(src='/assets/image/sns/icon_clipboard.svg' alt='https://krungthaihny2021.com/')
+            span.btn-copy-clipboard__tooltip Copied

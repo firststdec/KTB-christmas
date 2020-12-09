@@ -5,6 +5,7 @@ import arrowDown from './modules/arrowDown'
 import predict from './modules/predict'
 import modal from './modules/modal'
 import buttonBackToTop from './modules/buttonBackToTop'
+import copyClipboard from './modules/copyClipboard'
 // import snsShare from './modules/snsShare'
 
 const app = () => {
@@ -13,6 +14,7 @@ const app = () => {
   predict()
   modal()
   buttonBackToTop()
+  copyClipboard()
   // snsShare()
 }
 
