@@ -1,6 +1,8 @@
 import dataPredict from './dataPredict'
 
 const classShow = 'is-show'
+// eslint-disable-next-line import/no-mutable-exports
+let indexOfPredictRamdom = 0
 
 const randomPredict = () => {
   const predictBoxElm = document.getElementById('predictBox')
@@ -8,6 +10,8 @@ const randomPredict = () => {
   const predictBoxTitleElm = predictBoxElm.querySelector('.predict-list__title')
   const predictBoxTextElm = predictBoxElm.querySelector('.predict-list__text')
   const objectResult = dataPredict[Math.floor(Math.random() * dataPredict.length)]
+  const objectResultIndex = dataPredict.findIndex(item => item.id === objectResult.id)
+  indexOfPredictRamdom = objectResultIndex + 1
 
   let orcodeType = ''
 
@@ -29,7 +33,7 @@ const randomPredict = () => {
 
   // set link to line button share
   const btnLineShare = document.getElementById('btnLineShare')
-  const urlShare = encodeURIComponent('https://krungthaihny2021.com/')
+  const urlShare = encodeURIComponent(`https://krungthaihny2021.com/share_${indexOfPredictRamdom}.html`)
   btnLineShare.setAttribute('href', `https://social-plugins.line.me/lineit/share?url=${urlShare}`)
 }
 
@@ -136,6 +140,10 @@ const predict = () => {
   openPredict()
   openModalQrcode()
   changeQrcode()
+}
+
+export {
+  indexOfPredictRamdom
 }
 
 export default predict

@@ -39,6 +39,7 @@
     "gulp-wait": "^0.0.2",
     "rimraf": "^3.0.2",
     "stylelint": "^13.7.2",
+    "uuidv4": "^6.2.6",
     "webpack-stream": "^6.1.0"
   },
   "dependencies": {

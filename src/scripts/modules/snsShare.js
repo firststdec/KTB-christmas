@@ -1,4 +1,6 @@
 /* eslint-disable space-before-function-paren */
+import { indexOfPredictRamdom } from './predict'
+
 const facebookShare = () => {
   const btnShareFbElm = document.getElementById('bthFacebookShare')
   btnShareFbElm.addEventListener('click', e => {
@@ -8,7 +10,7 @@ const facebookShare = () => {
       {
         app_id: '725918654987891',
         method: 'share',
-        href: 'https://krungthaihny2021.com/',
+        href: `https://krungthaihny2021.com/share_${indexOfPredictRamdom}.html`,
         redirect_uri: 'https://krungthaihny2021.com/',
         hashtag: '#KTBHNY2021'
       },

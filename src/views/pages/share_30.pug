@@ -1,0 +1,37 @@
+extends ../layouts/master.pug
+
+block variables
+  -
+    const meta = {
+      title: 'Krungthai Bank - Merry Christmas & Happy New Year 2021',
+      keyword: 'Krungthai Bank - Merry Christmas & Happy New Year 2021',
+      description: 'Krungthai Bank - Merry Christmas & Happy New Year 2021',
+      ogTitle: 'Krungthai Bank - Merry Christmas & Happy New Year 2021',
+      ogDescription: 'สวัสดีปีใหม่ ปี 2564 คร้าบ ในปีใหม่นี้น้องวายุขอให้พี่ๆทุกคน โชคดี แฮปปี้ ตลอดปีและตลอดไปเลยนะครับ',
+      ogType: 'website',
+      ogSiteName: 'Krungthai Bank - Merry Christmas & Happy New Year 2021',
+      ogUrl: 'https://krungthaihny2021.com/',
+      ogImage: '/assets/image/share/bnr_share_30.jpg'
+    }
+    const topPage = true;
+
+block append scripts
+
+block content
+  //- Hero
+  include ../sections/_hero
+
+  //- Marble
+  include ../sections/_marble
+
+  //- Predict
+  include ../sections/_predict
+
+  //- Happynewyear
+  include ../sections/_happynewyear
+
+  //- Footer
+  include ../sections/_footer
+
+  //- Modal
+  include ../sections/_modal
