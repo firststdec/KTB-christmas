@@ -26,6 +26,11 @@ const randomPredict = () => {
   predictBoxItemElm.setAttribute('data-banner-share', objectResult.banner)
   predictBoxTitleElm.innerHTML = objectResult.title
   predictBoxTextElm.innerHTML = objectResult.desc
+
+  // set link to line button share
+  const btnLineShare = document.getElementById('btnLineShare')
+  const urlShare = encodeURIComponent('https://krungthaihny2021.com/')
+  btnLineShare.setAttribute('href', `https://social-plugins.line.me/lineit/share?url=${urlShare}`)
 }
 
 const openPredict = () => {

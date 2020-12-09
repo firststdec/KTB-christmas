@@ -1,6 +1,6 @@
 /* eslint-disable space-before-function-paren */
 const facebookShare = () => {
-  const btnShareFbElm = document.getElementById('buttonShareFacebook')
+  const btnShareFbElm = document.getElementById('bthFacebookShare')
   btnShareFbElm.addEventListener('click', e => {
     e.preventDefault()
     // eslint-disable-next-line no-undef
@@ -26,8 +26,17 @@ const facebookShare = () => {
   })
 }
 
+// const lineShare = () => {
+//   const btnShareFbElm = document.getElementById('btnLineShare')
+//   btnShareFbElm.addEventListener('click', e => {
+//     e.preventDefault()
+
+//   })
+// }
+
 const snsShare = () => {
   facebookShare()
+  // lineShare()
 }
 
 export default snsShare
