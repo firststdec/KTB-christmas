@@ -132,27 +132,33 @@
 
   &__item {
     &:not(:first-child) {
-      margin-left: 6.400vw;
+      margin-left: 20px;
 
       @include mq-up(md) {
-        margin-left: 1.823vw;
+        margin-left: 15px;
+      }
+
+      @include mq-up(1200) {
+        margin-left: 30px;
       }
     }
   }
 
   &__link {
     display: block;
-    width: 9.067vw;
-    height: 9.067vw;
+    width: 36px;
+    height: 36px;
     transition: opacity .2s;
 
     @include mq-up(md) {
-      width: 2.6vw;
-      height: 2.6vw;
-
       &:hover {
         opacity: .7;
       }
+    }
+
+    @include mq-up(1200) {
+      width: 50px;
+      height: 50px;
     }
 
     img {
