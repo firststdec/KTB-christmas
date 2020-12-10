@@ -10,8 +10,7 @@ const randomPredict = () => {
   const predictBoxTitleElm = predictBoxElm.querySelector('.predict-list__title')
   const predictBoxTextElm = predictBoxElm.querySelector('.predict-list__text')
   const objectResult = dataPredict[Math.floor(Math.random() * dataPredict.length)]
-  const objectResultIndex = dataPredict.findIndex(item => item.id === objectResult.id)
-  indexOfPredictRamdom = objectResultIndex + 1
+  indexOfPredictRamdom = objectResult.id
 
   let orcodeType = ''
 
@@ -42,9 +41,10 @@ const openPredict = () => {
   const secMarbleElm = document.getElementById('secMarble')
   const secPredictElm = document.getElementById('secPredict')
   let secPredictElmTop = 0
+  const classShake = 'is-shake'
   marbleElm.addEventListener('click', () => {
     if (!secPredictElm.classList.contains(classShow)) {
-      marbleElm.classList.add('is-shake')
+      marbleElm.classList.add(classShake)
       randomPredict()
 
       setTimeout(() => {
@@ -54,7 +54,8 @@ const openPredict = () => {
           top: secPredictElmTop,
           behavior: 'smooth',
         })
-      }, 700)
+        marbleElm.classList.remove(classShake)
+      }, 1000)
     } else {
       window.scrollTo({
         top: secPredictElmTop,

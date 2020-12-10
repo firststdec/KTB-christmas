@@ -5,40 +5,15 @@ const facebookShare = () => {
   const btnShareFbElm = document.getElementById('bthFacebookShare')
   btnShareFbElm.addEventListener('click', e => {
     e.preventDefault()
+
     // eslint-disable-next-line no-undef
-    FB.ui(
-      {
-        app_id: '725918654987891',
-        method: 'share',
-        href: `https://krungthaihny2021.com/share_${indexOfPredictRamdom}.html`,
-        redirect_uri: 'https://krungthaihny2021.com/',
-        hashtag: '#KTBHNY2021'
-      },
-      // callback
-      function(response) {
-        if (response && !response.error_message) {
-          // eslint-disable-next-line no-alert
-          console.log('Posting completed.')
-        } else {
-          // eslint-disable-next-line no-alert
-          console.log('Error while posting.')
-        }
-      }
-    )
+    const urlShare = encodeURIComponent(`https://krungthaihny2021.com/share_${indexOfPredictRamdom}.html`)
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${urlShare}&hashtag=%23KTBHNY2021`, 'fbShareWindow')
   })
 }
 
-// const lineShare = () => {
-//   const btnShareFbElm = document.getElementById('btnLineShare')
-//   btnShareFbElm.addEventListener('click', e => {
-//     e.preventDefault()
-
-//   })
-// }
-
 const snsShare = () => {
   facebookShare()
-  // lineShare()
 }
 
 export default snsShare
