@@ -6,6 +6,7 @@ let indexOfPredictRamdom = 0
 
 const randomPredict = () => {
   const predictBoxElm = document.getElementById('predictBox')
+  const predictTextItemElm = document.getElementById('btnTextQR')
   const predictBoxItemElm = predictBoxElm.querySelector('.predict-list__item')
   const predictBoxTitleElm = predictBoxElm.querySelector('.predict-list__title')
   const predictBoxTextElm = predictBoxElm.querySelector('.predict-list__text')
@@ -14,26 +15,50 @@ const randomPredict = () => {
 
   let orcodeType = ''
 
-  switch (objectResult.type) {
-    case 'health':
-      orcodeType = 'qrHealth'
-      break
-    case 'love':
+  let TextButtonPredict = ''
+
+  // switch (objectResult.type) {
+  //   case 'health':
+  //     orcodeType = 'qrHealth'
+  //     break
+  //   case 'love':
+  //     orcodeType = 'qrLove'
+  //     break
+  //   default:
+  //     orcodeType = 'qrWork'
+  // }
+
+  switch (objectResult.donate) {
+    case 'turtle':
       orcodeType = 'qrLove'
+      TextButtonPredict = 'เติมบุญด้านความรัก คลิกเลย'
+      break
+    case 'priest':
+      orcodeType = 'qrHealth'
+      TextButtonPredict = 'เติมบุญด้านสุขภาพ คลิกเลย'
       break
     default:
       orcodeType = 'qrWork'
+      TextButtonPredict = 'เติมบุญด้านการงาน คลิกเลย'
   }
+  console.log(predictTextItemElm)
+  console.log(TextButtonPredict)
 
   predictBoxItemElm.setAttribute('data-qr-target', orcodeType)
-  predictBoxItemElm.setAttribute('data-banner-share', objectResult.banner)
   predictBoxTitleElm.innerHTML = objectResult.title
   predictBoxTextElm.innerHTML = objectResult.desc
 
-  // set link to line button share
+  predictTextItemElm.innerHTML = TextButtonPredict
+
+  // set link to line & clipboard button share
   const btnLineShare = document.getElementById('btnLineShare')
+  const btnClipboardShare = document.getElementById('inputClipboard')
+  
   const urlShare = encodeURIComponent(`https://krungthaihny2021.com/share_${indexOfPredictRamdom}.html`)
+
   btnLineShare.setAttribute('href', `https://social-plugins.line.me/lineit/share?url=${urlShare}`)
+  btnClipboardShare.setAttribute('value', `https://krungthaihny2021.com/share_${indexOfPredictRamdom}.html`)
+
 }
 
 const openPredict = () => {
@@ -92,6 +117,9 @@ const setQrCode = target => {
     buttonBagParentElm.style.display = 'flex'
     buttonHealthParentElm.style.display = 'none'
   }
+
+
+  
 }
 
 const changeQrcode = () => {
